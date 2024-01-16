@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Image Editor in JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <nav>
+        <h2>Photo Editor</h2>
+    </nav>
+    <main>
+        <div class="container disabled">
+            <div class="wrapper">
+                <div class="editor-panel">
+                    <div class="filter">
+                        <p class="title">Filters</p>
+                        <div class="options">
+                            <button id="brightness" class="button active">Brightness</button>
+                            <button id="saturation" class="button">Saturation</button>
+                            <button id="inversion" class="button">Inversion</button>
+                            <button id="grayscale" class="button">Grayscale</button>
+                        </div>
+                        <div class="slider">
+                            <div class="slider-info">
+                                <p class="name">Brightness</p>
+                                <p class="value">100%</p>
+                            </div>
+                            <input type="range" min="0" max="200">
+                        </div>
+                    </div>
+                    <div class="rotate">
+                        <p class="title">Rotate & Flip</p>
+                        <div class="options">
+                            <button class="button" id="left">
+                                left
+                            </button>
+                            <button class="button" id="right">
+                                right
+                            </button>
+                            <button class="button" id="horizontal">
+                                horizontal
+                            </button>
+                            <button class="button" id="vertical">
+                                vertical
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-preview" draggable="true">
+                    <img src="image-placeholder.svg" alt="preview-image">
+                </div>
+            </div>
+            <div class="buttons">
+                <div class="button__left">
+                    <button class="button reset">RESET FILTERS</button>
+                </div>
+                <div class="button__right">
+                    <input type="file" class="file-input" accept="image/*" hidden>
+                    <button class="button is-gray choose-image">CHOOSE IMAGE</button>
+                    <button class="button is-primary save">SAVE IMAGE</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
